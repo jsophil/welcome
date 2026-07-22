@@ -61,7 +61,7 @@
 
     .logo-row img {
       height: auto;
-      max-width: 50%; /* enlarged logos but still fit one row */
+      max-width: 52%; /* enlarged logos but still fit one row */
     }
 
     .top-products {
@@ -72,16 +72,52 @@
       font-weight: bold;
     }
 
-    .product-row {
+    /* Products layout */
+    .products-layout {
       display: flex;
       justify-content: space-between;
-      margin: 10px auto;
+      align-items: center;
       max-width: 95%;
+      margin: 20px auto;
     }
 
-    .product-row img {
-      max-width: 15%; /* 6 per row, half size of brand logos */
-      height: auto;
+    .parts-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* left-justified */
+      gap: 15px;
+    }
+
+    .top-line, .bottom-line {
+      display: flex;
+      gap: 15px;
+    }
+
+    .parts-column img {
+      max-width: 80px; /* smaller parts images */
+    }
+
+    .engines-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; /* center engines vertically */
+      gap: 20px;
+    }
+
+    .engines-column img {
+      max-width: 150px; /* larger engine images */
+    }
+
+    figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    figcaption {
+      font-size: 12px;
+      margin-top: 5px;
+      color: #333;
     }
 
     .about {
@@ -103,6 +139,11 @@
     .contact-info h2 {
       color: darkgray;
       font-size: clamp(16px, 2vw, 26px);
+    }
+
+    .contact-info strong,
+    .contact-info a {
+      font-size: 1.1em; /* slightly bigger phone/email */
     }
 
     .map-link {
@@ -151,11 +192,15 @@
       }
 
       .logo-row img {
-        max-width: 48%; /* slightly smaller for mobile */
+        max-width: 50%; /* slightly smaller for mobile */
       }
 
-      .product-row img {
-        max-width: 15%; /* keep 6 per row */
+      .parts-column img {
+        max-width: 60px;
+      }
+
+      .engines-column img {
+        max-width: 120px;
       }
 
       .contact-info {
@@ -193,20 +238,53 @@
   </div>
 
   <p class="top-products">TOP PRODUCTS</p>
-  <div class="product-row">
-    <img src="product1.jpg" alt="Product 1">
-    <img src="product2.jpg" alt="Product 2">
-    <img src="product3.jpg" alt="Product 3">
-    <img src="product4.jpg" alt="Product 4">
-    <img src="product5.jpg" alt="Product 5">
-    <img src="product6.jpg" alt="Product 6">
+  <div class="products-layout">
+    <!-- Left column: parts -->
+    <div class="parts-column">
+      <div class="top-line">
+        <figure>
+          <img src="ecstar-marine-oil.jpg" alt="Ecstar Marine Engine Oil">
+          <figcaption>Ecstar Marine Engine Oil</figcaption>
+        </figure>
+        <figure>
+          <img src="ecstar-gear-lube.jpg" alt="Ecstar Gear Lube">
+          <figcaption>Ecstar Gear Lube</figcaption>
+        </figure>
+        <figure>
+          <img src="spark-plugs.jpg" alt="Spark Plugs">
+          <figcaption>Spark Plugs</figcaption>
+        </figure>
+      </div>
+      <div class="bottom-line">
+        <figure>
+          <img src="fuel-filter.jpg" alt="Fuel Filter">
+          <figcaption>Fuel Filter</figcaption>
+        </figure>
+        <figure>
+          <img src="water-separator-filter.jpg" alt="Water Separator Filter">
+          <figcaption>Water Separator Filter</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Right column: engines -->
+    <div class="engines-column">
+      <figure>
+        <img src="df300a.jpg" alt="Suzuki DF300A">
+        <figcaption>Suzuki DF300A</figcaption>
+      </figure>
+      <figure>
+        <img src="df15.jpg" alt="Suzuki DF15">
+        <figcaption>Suzuki DF15</figcaption>
+      </figure>
+    </div>
   </div>
 
   <div class="about">
     <h2>⚙️ About Us</h2>
     <p>
-      JSOPhil Enterprises is a 4S facility complete with Sales Service Spare Parts and Support. <br>
-      We build, repair, provide maintenace and servicing for  boats and yacths with complete marine services.<br>
+      JSOPhil Enterprises is a 4S facility complete with Sales, Service, Spare Parts, and Support. <br>
+      We build, repair, provide maintenance and servicing for boats and yachts with complete marine services.<br>
       We proudly serve Philippine Customers with reliable support for your boating and marine needs.<br>
     </p>
   </div>
@@ -218,7 +296,8 @@
       <strong>Manila Cavite Road, Barangay 8,<br>Dalahican 4102, Cavite City</strong>
     </p>
     <p>
-      <small><i>Phone:</i></small> <strong>+63 949 364 9240</strong>
+      <small><i>Phone:</i></small>
+      <strong>+63 949 364 9240</strong>
       <span style="margin-left:20px;"></span>
       <small><i>Email:</i></small>
       <a href="mailto:jsophil@gmail.com"><strong>jsophil@gmail.com</strong></a>
