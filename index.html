@@ -14,7 +14,7 @@
       background-color: white;
       margin: 0;
       padding: 0;
-      text-align: center; /* centers all text by default */
+      text-align: center;
     }
 
     .jsophil-logo {
@@ -31,29 +31,37 @@
 
     h1 {
       color: darkgray;
-      font-size: clamp(18px, 2.2vw, 32px); /* reduced size */
+      font-size: clamp(18px, 2.2vw, 32px);
     }
 
     h2 {
       color: dodgerblue;
-      font-size: clamp(20px, 3.5vw, 40px); /* reduced size */
+      font-size: clamp(20px, 3.5vw, 40px);
     }
 
     p {
       font-size: clamp(14px, 2vw, 20px);
     }
 
+    /* Make Welcome + tagline closer */
+    .header h1 {
+      margin-bottom: 5px;
+    }
+    .header h2 {
+      margin-top: 0;
+    }
+
     .logo-row {
       display: flex;
-      justify-content: center;
+      justify-content: space-between; /* stretch logos widest possible */
       align-items: center;
-      gap: 5vh;
-      margin: 4vh 0;
+      margin: 4vh auto;
+      max-width: 800px;
     }
 
     .logo-row img {
       height: auto;
-      max-width: 20%;
+      max-width: 45%; /* each logo takes nearly half row */
     }
 
     .contact-info {
@@ -63,12 +71,12 @@
       margin: 20px auto;
       max-width: 800px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center; /* center content inside box */
+      text-align: center;
     }
 
     .contact-info h2 {
-      color: darkgray; /* same as Welcome */
-      font-size: clamp(18px, 2.2vw, 32px); /* same size as Welcome */
+      color: darkgray;
+      font-size: clamp(18px, 2.2vw, 32px);
     }
 
     .map-link {
@@ -76,8 +84,8 @@
     }
 
     .map-link a {
-      display: block;            /* full-width button */
-      width: 100%;               /* stretches across contact box */
+      display: block;
+      width: 100%;
       padding: 12px 0;
       background-color: dodgerblue;
       color: white;
@@ -92,50 +100,50 @@
 
     .about {
       margin: 20px auto;
-      max-width: 800px;
-      text-align: center; /* center About section */
+      max-width: 600px; /* narrower wrap for About Us */
+      text-align: center;
     }
 
     /* Mobile Portrait Optimization */
     @media (max-width: 480px) {
       .jsophil-logo {
-        width: 90vw;   /* logo fills most of screen width */
+        width: 90vw;
         margin-top: 10px;
       }
 
       h1 {
-        font-size: 20px; /* smaller headline */
+        font-size: 20px;
       }
 
       h2 {
-        font-size: 18px; /* smaller tagline and section titles */
+        font-size: 18px;
       }
 
       p {
-        font-size: 14px; /* readable but compact */
+        font-size: 14px;
       }
 
       .logo-row {
-        flex-direction: column; /* stack logos vertically */
+        flex-direction: column;
         gap: 20px;
       }
 
       .logo-row img {
-        max-width: 60%; /* resize logos for mobile */
+        max-width: 80%;
       }
 
       .contact-info {
         padding: 15px;
-        max-width: 95%; /* use almost full screen width */
+        max-width: 95%;
       }
 
       .map-link a {
-        font-size: 16px; /* button text fits mobile */
+        font-size: 16px;
         padding: 12px;
       }
 
       .about {
-        max-width: 95%;
+        max-width: 90%;
         padding: 10px;
       }
     }
@@ -156,7 +164,10 @@
 
   <div class="contact-info">
     <h2>📍 Contact Information</h2>
-    <p><small><i>Address:</i></small> <strong>Manila Cavite Road, Barangay 8, Dalahican 4102, Cavite City</strong></p>
+    <p>
+      <small><i>Address:</i></small>
+      <strong>Manila Cavite Road, Barangay 8,<br>Dalahican 4102, Cavite City</strong>
+    </p>
     <p>
       <small><i>Phone:</i></small> <strong>+63 949 364 9240</strong>
       <span style="margin-left:30px;"></span>
@@ -164,7 +175,6 @@
       <a href="mailto:jsophil@gmail.com"><strong>jsophil@gmail.com</strong></a>
     </p>
 
-    <!-- Full-width Google Maps Link -->
     <div class="map-link">
       <a href="https://www.google.com/maps/place/Manila+Cavite+Road,+Barangay+8,+Dalahican+4102,+Cavite+City"
          target="_blank" rel="noopener noreferrer">
