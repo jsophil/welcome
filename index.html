@@ -95,6 +95,50 @@
       max-width: 800px;
       text-align: center; /* center About section */
     }
+
+    /* Mobile Portrait Optimization */
+    @media (max-width: 480px) {
+      .jsophil-logo {
+        width: 90vw;   /* logo fills most of screen width */
+        margin-top: 10px;
+      }
+
+      h1 {
+        font-size: 20px; /* smaller headline */
+      }
+
+      h2 {
+        font-size: 18px; /* smaller tagline and section titles */
+      }
+
+      p {
+        font-size: 14px; /* readable but compact */
+      }
+
+      .logo-row {
+        flex-direction: column; /* stack logos vertically */
+        gap: 20px;
+      }
+
+      .logo-row img {
+        max-width: 60%; /* resize logos for mobile */
+      }
+
+      .contact-info {
+        padding: 15px;
+        max-width: 95%; /* use almost full screen width */
+      }
+
+      .map-link a {
+        font-size: 16px; /* button text fits mobile */
+        padding: 12px;
+      }
+
+      .about {
+        max-width: 95%;
+        padding: 10px;
+      }
+    }
   </style>
 </head>
 <body>
