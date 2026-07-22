@@ -10,70 +10,100 @@
 
   <style>
     body {
-        font-family: Arial, sans-serif;
-        background-color: white;
-    }
-    header, .jsophil-logo {
-      display: block;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
       text-align: center;
     }
-    h1, h2, p { margin-top: 10px; margin-bottom: 10px; }
-    h1 { color: darkgray; font-size: 3vw; }
-    h2 { font-size: 6vw; color: dodgerblue; }
-    p  { font-size: 2vw; }
 
-  .logo-row {
-    display: flex;
-    justify-content: center; /* Centers them horizontally */
-    align-items: center;     /* Centers them vertically (height to height) */
-    gap: 5vh;               /* Space between images */
-    margin: 4vh 0;          /* Space above and below the row */
-  }
-  .contact-info {
-    padding: 2vw;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    margin: 20px auto;
-    max-width: 800px; /* keeps it neat on wide screens */
-  }
+    .jsophil-logo {
+      display: block;
+      margin: 20px auto;
+      width: 60vw;
+      height: auto;
+    }
+
+    h1, h2, p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      color: darkgray;
+      font-size: clamp(20px, 3vw, 40px);
+    }
+
+    h2 {
+      color: dodgerblue;
+      font-size: clamp(24px, 6vw, 60px);
+    }
+
+    p {
+      font-size: clamp(14px, 2vw, 20px);
+    }
+
+    .logo-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5vh;
+      margin: 4vh 0;
+    }
+
+    .logo-row img {
+      height: auto;
+      max-width: 20%;
+    }
+
+    .contact-info {
+      padding: 2vw;
+      background-color: #f4f4f4;
+      border-radius: 8px;
+      margin: 20px auto;
+      max-width: 800px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .about {
+      margin: 20px auto;
+      max-width: 800px;
+      text-align: left;
+    }
   </style>
 </head>
 <body>
-  <img src="jsophil.jpg" alt="JSOPhil Enterprises" class="jsophil-logo">
+<img src="jsophil.jpg" alt="JSOPhil Enterprises" class="jsophil-logo">
 
-  <div class="header">
+<div class="header">
+  <h1>Welcome to JSOPhil Enterprises</h1>
+  <h2><i>"Your trusted Marine Supplier since 1992"</i></h2>
+  <p><i><b>"TOP BRANDS"</b></i></p>
 
-    <h1>Welcome to JSOPhil Enterprises</h1>
-    <h2><i>"Your trusted Marine Supplier since 1992"</i></h2>
-    <p><i><b>"TOP BRANDS"</b></i></p>
-
-    <div class="logo-row">
-      <img src="suzuki.jpg" style="width:20%; height:auto;" alt="SUZUKI MARINE" class="suzuki-image">
-      <img src="internationallogo.jpg" style="width:15%; height:auto;" alt="International Paint" class="international-image">
-    </div>
-
-    <div class="contact-info">
-      <h2>📍 Contact Information</h2>
-      <p><small><i>Address:</i></small><strong> Manila Cavite Road, Barangay 8, Dalahican 4102, Cavite City </strong></p>
-      <p> <small><i>Phone:</i></small><strong> +63 949 364 9240 </strong>
-          <span style="margin-left:30px;"> </span>
-          <small><i>Email:</i></small>
-          <a href="mailto:jsophil@gmail.com" >
-          <strong>jsophil@gmail.com </strong>
-          </a>
-      </p>
-    </div>
-
-    <div class="about">
-      <h2>⚙️ About Us</h2>
-      <p>
-        JSOPhil Enterprises provides genuine Suzuki parts, Ecstar oil, and marine services. <br>
-        We proudly serve Philippine Customers with reliable support for your boating and marine needs. <br>
-      </p>
-    </div>
+  <div class="logo-row">
+    <img src="suzuki.jpg" alt="SUZUKI MARINE">
+    <img src="internationallogo.jpg" alt="International Paint">
   </div>
+
+  <div class="contact-info">
+    <h2>📍 Contact Information</h2>
+    <p><small><i>Address:</i></small> <strong>Manila Cavite Road, Barangay 8, Dalahican 4102, Cavite City</strong></p>
+    <p>
+      <small><i>Phone:</i></small> <strong>+63 949 364 9240</strong>
+      <span style="margin-left:30px;"></span>
+      <small><i>Email:</i></small>
+      <a href="mailto:jsophil@gmail.com"><strong>jsophil@gmail.com</strong></a>
+    </p>
+  </div>
+
+  <div class="about">
+    <h2>⚙️ About Us</h2>
+    <p>
+      JSOPhil Enterprises provides genuine Suzuki parts, Ecstar oil, and marine services.<br>
+      We proudly serve Philippine Customers with reliable support for your boating and marine needs.<br>
+    </p>
+  </div>
+</div>
 </body>
 </html>
