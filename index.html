@@ -21,7 +21,7 @@
     .jsophil-logo {
       display: block;
       margin: 15px auto;
-      width: 45vw; /* reduced to 3/4 size */
+      width: 45vw;
       height: auto;
     }
 
@@ -72,21 +72,23 @@
       font-weight: bold;
     }
 
-    /* Products grid */
+    /* UPDATED: Products layout to center both columns */
     .products-layout {
       display: flex;
-      justify-content: space-between;
+      justify-content: center; /* Centers the whole block */
       align-items: flex-start;
+      gap: 40px;               /* The space between the parts and engines */
       max-width: 95%;
       margin: 20px auto;
     }
 
+    /* UPDATED: Parts grid to hug the center line */
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 100px); /* Fixed width for alignment */
       grid-template-rows: auto auto;
       gap: 15px;
-      max-width: 65%;
+      justify-content: end;    /* Right-justifies the grid to the center gap */
     }
 
     .products-grid figure {
@@ -101,36 +103,39 @@
     }
 
     .products-grid figcaption {
-      font-size: 12px;
+      font-size: 11px;
       margin-top: 5px;
       color: #333;
+      line-height: 1.1;
     }
 
     /* Position bottom two centered under top three */
     .products-grid figure:nth-child(4) {
-      grid-column: 2;
+      grid-column: 1 / span 2;
+      margin-right: -50px; /* Offset to center under the 3 above */
+      justify-self: end;
     }
     .products-grid figure:nth-child(5) {
-      grid-column: 3;
+      grid-column: 2 / span 2;
+      margin-left: 50px; /* Offset to center under the 3 above */
+      justify-self: start;
     }
 
-.engines-column img {
-  width: 150px;   /* fixed width */
-  height: 150px;  /* fixed height */
-  object-fit: contain; /* keeps proportions inside the box */
-}
-
-    .engines-column img {
-      max-width: 150px;
-    }
-
-    figure {
-      margin: 0;
+    .engines-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
       text-align: center;
     }
 
+    .engines-column img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+    }
+
     .about {
-      margin: 15px auto;
+      margin: 30px auto 15px;
       max-width: 450px;
       text-align: center;
     }
@@ -150,11 +155,6 @@
       font-size: clamp(16px, 2vw, 26px);
     }
 
-    .contact-info strong,
-    .contact-info a {
-      font-size: 1.1em;
-    }
-
     .map-link {
       margin: 20px auto;
       max-width: 90%;
@@ -171,34 +171,15 @@
       font-weight: bold;
     }
 
-    .map-link a:hover {
-      background-color: #005bb5;
-    }
-
-    @media (max-width: 480px) {
-      .jsophil-logo {
-        width: 70vw;
-        margin-top: 10px;
+    @media (max-width: 600px) {
+      .products-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
       }
-
-      h1 { font-size: 18px; }
-      h2 { font-size: 16px; }
-      p { font-size: 13px; }
-
-      .logo-row img { max-width: 50%; }
-
-      .products-grid img {
-        width: 80px;
-        height: 80px;
+      .products-grid {
+        justify-content: center;
       }
-
-      .engines-column img {
-        max-width: 120px;
-      }
-
-      .contact-info { padding: 12px; max-width: 95%; }
-      .map-link a { font-size: 14px; padding: 10px; }
-      .about { max-width: 90%; padding: 8px; }
     }
   </style>
 </head>
@@ -220,12 +201,13 @@
   </div>
 
   <p class="top-products">"TOP PRODUCTS"</p>
+
   <div class="products-layout">
-    <!-- Left grid: parts -->
+    <!-- Left grid: parts (Right justified to center gap) -->
     <div class="products-grid">
       <figure>
         <img src="ecstar-marine-oil.jpg" alt="Ecstar Marine Engine Oil">
-        <figcaption>Ecstar Marine Engine Oil</figcaption>
+        <figcaption>Ecstar Marine Oil</figcaption>
       </figure>
       <figure>
         <img src="9900022B48ECSTARMarineGearOil.jpg" alt="Ecstar Gear Oil">
@@ -241,7 +223,7 @@
       </figure>
       <figure>
         <img src="waterseparator.jpg" alt="Water Separator Filter">
-        <figcaption>Water Separator Filter</figcaption>
+        <figcaption>Water Separator</figcaption>
       </figure>
     </div>
 
@@ -260,27 +242,21 @@
 
   <div class="about">
     <h2>⚙️ About Us</h2>
+    <p>JSOPhil Enterprises is a 4S facility complete with Sales, Service, Spare Parts, and Support.</p>
   </div>
 
   <div class="contact-info">
     <h2>📍 Contact Information</h2>
+    <p><small><i>Address:</i></small> <strong>Manila Cavite Road, Barangay 8, Cavite City</strong></p>
     <p>
-      <small><i>Address:</i></small>
-      <strong>Manila Cavite Road, Barangay 8,<br>Dalahican 4102, Cavite City</strong>
-    </p>
-    <p>
-      <small><i>Phone:</i></small>
-      <strong>+63 949 364 9240</strong>
+      <small><i>Phone:</i></small> <strong>+63 949 364 9240</strong>
       <span style="margin-left:20px;"></span>
-      <small><i>Email:</i></small>
-      <a href="mailto:jsophil@gmail.com"><strong>jsophil@gmail.com</strong></a>
+      <small><i>Email:</i></small> <a href="mailto:jsophil@gmail.com"><strong>jsophil@gmail.com</strong></a>
     </p>
   </div>
 
-  <!-- Google Maps Link at very bottom -->
   <div class="map-link">
-    <a href="https://maps.app.goo.gl/j5pVhVYvELZS8DoV8"
-       target="_blank" rel="noopener noreferrer">
+    <a href="https://maps.app.goo.gl/j5pVhVYvELZS8DoV8" target="_blank" rel="noopener noreferrer">
       📍 View Location on Google Maps
     </a>
   </div>
