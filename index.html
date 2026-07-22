@@ -91,24 +91,38 @@
       border-radius: 6px;
       font-weight: bold;
     }
-/8
+/*
     .about-link {
       text-decoration: none;   /* remove underline from the link */
       border: none;            /* kill any border */
     }
-*/
+
     .about-link h2 {
       margin: 0;               /* remove extra spacing */
       padding: 0;              /* tighten layout */
-/*      text-decoration: none;   /* ensure no underline */
+      text-decoration: none;   /* ensure no underline */
       border: none;            /* ensure no line */
-*/      color: dodgerblue;       /* your chosen color */
+      color: dodgerblue;       /* your chosen color */
       cursor: pointer;         /* show it's clickable */
     }
 
     .about-link h2:hover {
       color: darkgray;         /* subtle hover effect */
     }
+  */
+
+    .about-link h2 {
+      color: dodgerblue;             /* text color */
+      text-decoration: underline;    /* underline only this h2 */
+      text-decoration-color: dodgerblue; /* make underline dodger blue */
+      cursor: pointer;
+    }
+
+    .about-link h2:hover {
+      color: darkgray;               /* hover text color */
+      text-decoration-color: darkgray; /* underline changes with hover */
+    }
+
   </style>
 </head>
 <body>
