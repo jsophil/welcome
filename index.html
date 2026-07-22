@@ -14,7 +14,7 @@
       background-color: white;
       margin: 0;
       padding: 0;
-      text-align: center;
+      text-align: center; /* centers all text by default */
     }
 
     .jsophil-logo {
@@ -31,12 +31,12 @@
 
     h1 {
       color: darkgray;
-      font-size: clamp(20px, 3vw, 40px);
+      font-size: clamp(18px, 2.2vw, 32px); /* reduced size */
     }
 
     h2 {
       color: dodgerblue;
-      font-size: clamp(24px, 6vw, 60px);
+      font-size: clamp(20px, 3.5vw, 40px); /* reduced size */
     }
 
     p {
@@ -63,16 +63,22 @@
       margin: 20px auto;
       max-width: 800px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: left;
+      text-align: center; /* center content inside box */
     }
 
-    .map {
+    .contact-info h2 {
+      color: darkgray; /* same as Welcome */
+      font-size: clamp(18px, 2.2vw, 32px); /* same size as Welcome */
+    }
+
+    .map-link {
       margin-top: 20px;
     }
 
     .map-link a {
-      display: inline-block;
-      padding: 10px 20px;
+      display: block;            /* full-width button */
+      width: 100%;               /* stretches across contact box */
+      padding: 12px 0;
       background-color: dodgerblue;
       color: white;
       text-decoration: none;
@@ -87,7 +93,7 @@
     .about {
       margin: 20px auto;
       max-width: 800px;
-      text-align: left;
+      text-align: center; /* center About section */
     }
   </style>
 </head>
@@ -114,19 +120,12 @@
       <a href="mailto:jsophil@gmail.com"><strong>jsophil@gmail.com</strong></a>
     </p>
 
-
+    <!-- Full-width Google Maps Link -->
     <div class="map-link">
       <a href="https://www.google.com/maps/place/Manila+Cavite+Road,+Barangay+8,+Dalahican+4102,+Cavite+City"
          target="_blank" rel="noopener noreferrer">
         📍 View Location on Google Maps
       </a>
-    </div>
-
-    <!-- Google Maps Embed -->
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d494508.93813917617!2d120.2731704711914!3d14.464518733412596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396330012abeda5%3A0x85a76601b925d76d!2sJSOPHIL%20Enterprises!5e0!3m2!1sen!2sph!4v1784713584114!5m2!1sen!2sph" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-      </iframe>
     </div>
   </div>
 
