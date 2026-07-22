@@ -81,47 +81,44 @@
       margin: 20px auto;
     }
 
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  max-width: 65%;
-  margin: 0 auto;
-}
-
-.products-grid figure {
-  margin: 0;
-  text-align: center;
-}
-
-.products-grid img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-}
-
-.products-grid figcaption {
-  font-size: 12px;
-  margin-top: 5px;
-  color: #333;
-}
-
-/* Place bottom two centered under the top three */
-.products-grid figure:nth-child(4) {
-  grid-column: 2; /* Fuel Filter in middle column */
-}
-.products-grid figure:nth-child(5) {
-  grid-column: 3; /* Water Separator in right column */
-}
-
-    .engines-column {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      max-width: 30%;
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 15px;
+      max-width: 65%;
     }
+
+    .products-grid figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    .products-grid img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+
+    .products-grid figcaption {
+      font-size: 12px;
+      margin-top: 5px;
+      color: #333;
+    }
+
+    /* Position bottom two centered under top three */
+    .products-grid figure:nth-child(4) {
+      grid-column: 2;
+    }
+    .products-grid figure:nth-child(5) {
+      grid-column: 3;
+    }
+
+.engines-column img {
+  width: 150px;   /* fixed width */
+  height: 150px;  /* fixed height */
+  object-fit: contain; /* keeps proportions inside the box */
+}
 
     .engines-column img {
       max-width: 150px;
@@ -235,7 +232,7 @@
         <figcaption>Ecstar Gear Oil</figcaption>
       </figure>
       <figure>
-        <img src="spark-plugs.jpg" alt="Spark Plugs">
+        <img src="WaterPump.jpg" alt="Water Pump Kits">
         <figcaption>Spark Plugs</figcaption>
       </figure>
       <figure>
