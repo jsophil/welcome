@@ -15,6 +15,7 @@
       margin: 0;
       padding: 0;
       text-align: center;
+      overflow-x: hidden; /* prevent sideways scroll */
     }
 
     .jsophil-logo {
@@ -45,7 +46,6 @@
       font-size: clamp(12px, 1.8vw, 16px);
     }
 
-    /* Lower TOP BRANDS line */
     .top-brands {
       margin-top: 15px;
       margin-bottom: 20px;
@@ -56,12 +56,32 @@
       justify-content: space-between;
       align-items: center;
       margin: 3vh auto;
-      max-width: 90%;
+      max-width: 95%;
     }
 
     .logo-row img {
       height: auto;
-      max-width: 40%; /* shrink logos so they fit side-by-side */
+      max-width: 48%; /* bigger logos but still fit one row */
+    }
+
+    .top-products {
+      margin-top: 20px;
+      margin-bottom: 15px;
+      font-size: clamp(12px, 2vw, 16px);
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .product-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px auto;
+      max-width: 95%;
+    }
+
+    .product-row img {
+      max-width: 15%; /* 6 per row, half size of brand logos */
+      height: auto;
     }
 
     .contact-info {
@@ -80,13 +100,14 @@
     }
 
     .map-link {
-      margin-top: 15px;
+      margin: 20px auto;
+      max-width: 90%;
     }
 
     .map-link a {
       display: block;
       width: 100%;
-      padding: 10px 0;
+      padding: 12px 0;
       background-color: dodgerblue;
       color: white;
       text-decoration: none;
@@ -130,7 +151,11 @@
       }
 
       .logo-row img {
-        max-width: 38%; /* shrink logos further for mobile */
+        max-width: 46%; /* slightly smaller for mobile */
+      }
+
+      .product-row img {
+        max-width: 15%; /* 6 per row on mobile too */
       }
 
       .contact-info {
@@ -159,8 +184,22 @@
   <p class="top-brands"><i><b>"TOP BRANDS"</b></i></p>
 
   <div class="logo-row">
-    <img src="suzuki.jpg" alt="SUZUKI MARINE">
-    <img src="internationallogo.jpg" alt="International Paint">
+    <a href="https://www.globalsuzuki.com/marine/" target="_blank" rel="noopener noreferrer">
+      <img src="suzuki.jpg" alt="SUZUKI MARINE">
+    </a>
+    <a href="https://www.international-marine.com/" target="_blank" rel="noopener noreferrer">
+      <img src="internationallogo.jpg" alt="International Paint">
+    </a>
+  </div>
+
+  <p class="top-products">TOP PRODUCTS</p>
+  <div class="product-row">
+    <img src="product1.jpg" alt="Product 1">
+    <img src="product2.jpg" alt="Product 2">
+    <img src="product3.jpg" alt="Product 3">
+    <img src="product4.jpg" alt="Product 4">
+    <img src="product5.jpg" alt="Product 5">
+    <img src="product6.jpg" alt="Product 6">
   </div>
 
   <div class="contact-info">
@@ -175,13 +214,6 @@
       <small><i>Email:</i></small>
       <a href="mailto:jsophil@gmail.com"><strong>jsophil@gmail.com</strong></a>
     </p>
-
-    <div class="map-link">
-      <a href="https://www.google.com/maps/place/Manila+Cavite+Road,+Barangay+8,+Dalahican+4102,+Cavite+City"
-         target="_blank" rel="noopener noreferrer">
-        📍 View Location on Google Maps
-      </a>
-    </div>
   </div>
 
   <div class="about">
@@ -190,6 +222,14 @@
       JSOPhil Enterprises provides genuine Suzuki parts, Ecstar oil, and marine services.<br>
       We proudly serve Philippine Customers with reliable support for your boating and marine needs.<br>
     </p>
+  </div>
+
+  <!-- Google Maps Link at very bottom -->
+  <div class="map-link">
+    <a href="https://www.google.com/maps/place/Manila+Cavite+Road,+Barangay+8,+Dalahican+4102,+Cavite+City"
+       target="_blank" rel="noopener noreferrer">
+      📍 View Location on Google Maps
+    </a>
   </div>
 </div>
 </body>
