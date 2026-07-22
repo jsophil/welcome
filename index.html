@@ -13,34 +13,74 @@
       line-height: 1;
       text-align: center;
       font-size: 4vh;
-      background-color: white;    }
-    h1 { color: dodgerblue;  }
-    h2 {  }
-    p { font-size: 2vh; }
+      background-color: white;
+    }
+
+    .jsophil-logo {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    h1 {
+      color: dodgerblue;
+      font-size: 6vh;
+      margin: 4vh 0 2vh 0;
+    }
+    h2 {
+      font-size: 3vh;
+      color: #333;
+      margin-bottom: 2vh;
+    }
+    p {
+      font-size: 2.5vh;
+      margin: 1.5vh 0;
+    }
     .logo-row {
       display: flex;
       justify-content: center; /* Centers them horizontally */
       align-items: center;     /* Centers them vertically (height to height) */
-      gap: 30vh;               /* Space between images */
-      margin: 6vh;          /* Space above and below the row */
+      gap: 5vh;               /* Space between images */
+      margin: 4vh 0;          /* Space above and below the row */
+    }
+    .contact-info {
+      padding: 20px;
+      background-color: #f4f4f4;
     }
   </style>
 </head>
 <body>
+  <img src="jsophil.jpg" alt="JSOPhil Enterprises" style="width:auto; height:15vh;" class="jsophil-logo">
+
   <div class="header">
-    <img src="jsophil.jpg" alt="JSOPhil Enterprises" style="width:auto; height:15vh;" class="jsophil-logo">
+
     <h1>Welcome to JSOPhil Enterprises</h1>
+
     <h2><i>"Your trusted Marine Supplier since 1992"</i></h2>
-    <img src="suzuki.jpg" style="width:auto; height:10vh;" alt="SUZUKI MARINE" class="suzuki-image">
-    <img src="internationallogo.jpg" style="width:auto; height:8vh;" alt="International Paint" class="international-image">
-    <h2>📍 Contact Information</h2>
-    <p><small><i>Address:</i></small><strong> Manila Cavite Road, Barangay 8, Dalahican 4102, Cavite City </strong></p>
-    <p><small><i>Phone:</i></small><strong> +63 949 364 9240 </strong> <span style="margin-left:30px;"> </span> <small><i>Email:</i></small> <a href="mailto:jsophil@gmail.com" ><strong>jsophil@gmail.com </strong> </a></p>
-    <h2>⚙️ About Us</h2>
-    <p>
-      JSOPhil Enterprises provides genuine Suzuki parts, Ecstar oil, and marine services. <br>
-      We proudly serve Philippine Customers with reliable support for your boating and marine needs. <br>
-    </p>
-  </div>
+
+    <div class="logo-row">
+      <img src="suzuki.jpg" style="width:auto; height:10vh;" alt="SUZUKI MARINE" class="suzuki-image">
+      <img src="internationallogo.jpg" style="width:auto; height:8vh;" alt="International Paint" class="international-image">
+    </div>
+
+    <div class="contact-info"></div>
+      <h2>📍 Contact Information</h2>
+      <p><small><i>Address:</i></small><strong> Manila Cavite Road, Barangay 8, Dalahican 4102, Cavite City </strong></p>
+      <p>
+        <small><i>Phone:</i></small><strong> +63 949 364 9240 </strong>
+        <span style="margin-left:30px;"> </span>
+        <small><i>Email:</i></small>
+        <a href="mailto:jsophil@gmail.com" >
+          <strong>jsophil@gmail.com </strong>
+        </a>
+      </p>
+    </div>
+
+    <div class="about">
+      <h2>⚙️ About Us</h2>
+      <p>
+        JSOPhil Enterprises provides genuine Suzuki parts, Ecstar oil, and marine services. <br>
+        We proudly serve Philippine Customers with reliable support for your boating and marine needs. <br>
+      </p>
+    </div>
 </body>
 </html>
