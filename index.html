@@ -91,34 +91,17 @@
       border-radius: 6px;
       font-weight: bold;
     }
-/*
-    .about-link {
-      text-decoration: none;   /* remove underline from the link */
-      border: none;            /* kill any border */
+
+    .link-heading {
+      color: dodgerblue;             /* text color */
+      text-decoration: underline;    /* standard underline */
+      text-decoration-color: dodgerblue; /* underline color */
+      cursor: pointer;               /* show it's clickable */
     }
 
-    .about-link h2 {
-      margin: 0;               /* remove extra spacing */
-      padding: 0;              /* tighten layout */
-      text-decoration: none;   /* ensure no underline */
-      border: none;            /* ensure no line */
-      color: dodgerblue;       /* your chosen color */
-      cursor: pointer;         /* show it's clickable */
-    }
-
-    .about-link h2:hover {
-      color: darkgray;         /* subtle hover effect */
-    }
-  */
-
-    .about-link h2 {
-      text-decoration: underline;    /* underline only this h2 */
-      cursor: pointer;
-    }
-
-    .about-link h2:hover {
+    .link-heading:hover {
       color: darkgray;               /* hover text color */
-      text-decoration-color: darkgray; /* underline changes with hover */
+      text-decoration-color: darkgray; /* underline changes on hover */
     }
 
   </style>
@@ -142,7 +125,7 @@
   <div class="about">
     <!-- Placeholder: clickable icon linking to About page -->
     <a href="about.html" class="about-link">
-      <p><i>Who we are</i></p>
+      <h2 class=link-heading><i>Who we are</i></h2>
     </a>
   </div>
 
