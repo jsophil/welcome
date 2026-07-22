@@ -21,7 +21,7 @@
     .jsophil-logo {
       display: block;
       margin: 15px auto;
-      width: 55vw;
+      width: 45vw; /* reduced to 3/4 size */
       height: auto;
     }
 
@@ -61,7 +61,7 @@
 
     .logo-row img {
       height: auto;
-      max-width: 48%; /* bigger logos but still fit one row */
+      max-width: 50%; /* enlarged logos but still fit one row */
     }
 
     .top-products {
@@ -82,6 +82,12 @@
     .product-row img {
       max-width: 15%; /* 6 per row, half size of brand logos */
       height: auto;
+    }
+
+    .about {
+      margin: 15px auto;
+      max-width: 450px; /* narrower wrap for About Us */
+      text-align: center;
     }
 
     .contact-info {
@@ -119,16 +125,10 @@
       background-color: #005bb5;
     }
 
-    .about {
-      margin: 15px auto;
-      max-width: 450px; /* narrower wrap for About Us */
-      text-align: center;
-    }
-
     /* Mobile Portrait Optimization */
     @media (max-width: 480px) {
       .jsophil-logo {
-        width: 85vw;
+        width: 70vw; /* smaller logo for mobile */
         margin-top: 10px;
       }
 
@@ -151,11 +151,11 @@
       }
 
       .logo-row img {
-        max-width: 46%; /* slightly smaller for mobile */
+        max-width: 48%; /* slightly smaller for mobile */
       }
 
       .product-row img {
-        max-width: 15%; /* 6 per row on mobile too */
+        max-width: 15%; /* keep 6 per row */
       }
 
       .contact-info {
@@ -202,6 +202,15 @@
     <img src="product6.jpg" alt="Product 6">
   </div>
 
+  <div class="about">
+    <h2>⚙️ About Us</h2>
+    <p>
+      JSOPhil Enterprises is a 4S facility complete with Sales Service Spare Parts and Support. <br>
+      We build, repair, provide maintenace and servicing for  boats and yacths with complete marine services.<br>
+      We proudly serve Philippine Customers with reliable support for your boating and marine needs.<br>
+    </p>
+  </div>
+
   <div class="contact-info">
     <h2>📍 Contact Information</h2>
     <p>
@@ -213,14 +222,6 @@
       <span style="margin-left:20px;"></span>
       <small><i>Email:</i></small>
       <a href="mailto:jsophil@gmail.com"><strong>jsophil@gmail.com</strong></a>
-    </p>
-  </div>
-
-  <div class="about">
-    <h2>⚙️ About Us</h2>
-    <p>
-      JSOPhil Enterprises provides genuine Suzuki parts, Ecstar oil, and marine services.<br>
-      We proudly serve Philippine Customers with reliable support for your boating and marine needs.<br>
     </p>
   </div>
 
