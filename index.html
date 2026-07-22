@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>Welcome to JSOPhil Enterprises</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="JSOPhil Enterprises - Suzuki Marine dealer and Ecstar Oil retailer. Contact us for genuine Suzuki Outboards, spare parts, services, support, Ecstar oil, and marine services.">
-  <meta name="keywords" content="JSOPhil, JSOPhil Enterprises, Suzuki Marine, Ecstar Oil, Suzuki parts, marine services, Outboard Engines, PMS">
+  <meta name="description" content="JSOPhil Enterprises - Suzuki Marine dealer and Ecstar Oil retailer.">
+  <meta name="keywords" content="JSOPhil, Suzuki Marine, Ecstar Oil, Suzuki parts, marine services">
   <meta name="author" content="Jaco Soler">
 
   <style>
@@ -42,15 +42,6 @@
       margin-top: 0;
     }
 
-    p {
-      font-size: clamp(12px, 1.8vw, 16px);
-    }
-
-    .top-brands {
-      margin-top: 15px;
-      margin-bottom: 20px;
-    }
-
     .logo-row {
       display: flex;
       justify-content: space-between;
@@ -62,77 +53,6 @@
     .logo-row img {
       height: auto;
       max-width: 52%;
-    }
-
-    .top-products {
-      margin-top: 20px;
-      margin-bottom: 15px;
-      font-size: clamp(12px, 2vw, 16px);
-      font-style: italic;
-      font-weight: bold;
-    }
-
-    /* UPDATED: Products layout to center both columns */
-    .products-layout {
-      display: flex;
-      justify-content: center; /* Centers the whole block */
-      align-items: flex-start;
-      gap: 40px;               /* The space between the parts and engines */
-      max-width: 95%;
-      margin: 20px auto;
-    }
-
-    /* UPDATED: Parts grid to hug the center line */
-    .products-grid {
-      display: grid;
-
-      grid-template-columns: repeat(3, 50px); /* Fixed width for alignment */
-      grid-template-rows: auto auto;
-      gap: 15px;
-      justify-content: end;    /* Right-justifies the grid to the center gap */
-    }
-
-    .products-grid figure {
-      margin: 0;
-      text-align: center;
-    }
-
-    .products-grid img {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-    }
-
-    .products-grid figcaption {
-      font-size: 11px;
-      margin-top: 5px;
-      color: #333;
-      line-height: 1.1;
-    }
-
-    /* Position bottom two centered under top three */
-    .products-grid figure:nth-child(4) {
-      grid-column: 1 / span 2;
-      margin-right: -50px; /* Offset to center under the 3 above */
-      justify-self: end;
-    }
-    .products-grid figure:nth-child(5) {
-      grid-column: 2 / span 2;
-      margin-left: 50px; /* Offset to center under the 3 above */
-      justify-self: start;
-    }
-
-    .engines-column {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      text-align: center;
-    }
-
-    .engines-column img {
-      width: 150px;
-      height: 150px;
-      object-fit: contain;
     }
 
     .about {
@@ -171,17 +91,6 @@
       border-radius: 6px;
       font-weight: bold;
     }
-
-    @media (max-width: 600px) {
-      .products-layout {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-      }
-      .products-grid {
-        justify-content: center;
-      }
-    }
   </style>
 </head>
 <body>
@@ -190,7 +99,6 @@
 <div class="header">
   <h1>Welcome to JSOPhil Enterprises</h1>
   <h2><i>"Your trusted Marine Supplier since 1992"</i></h2>
-  <p class="top-brands"><i><b>"TOP BRANDS"</b></i></p>
 
   <div class="logo-row">
     <a href="https://www.globalsuzuki.com/marine/" target="_blank" rel="noopener noreferrer">
@@ -201,49 +109,12 @@
     </a>
   </div>
 
-  <p class="top-products">"TOP PRODUCTS"</p>
-
-  <div class="products-layout">
-    <!-- Left grid: parts (Right justified to center gap) -->
-    <div class="products-grid">
-      <figure>
-        <img src="ecstar-marine-oil.jpg" alt="Ecstar Marine Engine Oil">
-        <figcaption>Ecstar Marine Oil</figcaption>
-      </figure>
-      <figure>
-        <img src="9900022B48ECSTARMarineGearOil.jpg" alt="Ecstar Gear Oil">
-        <figcaption>Ecstar Gear Oil</figcaption>
-      </figure>
-      <figure>
-        <img src="WaterPumpKit.jpg" alt="Water Pump Kits">
-        <figcaption>Water Pump Kits</figcaption>
-      </figure>
-      <figure>
-        <img src="1541293J10000FuelFilterLOElement.jpg" alt="Fuel Filter">
-        <figcaption>Fuel Filter</figcaption>
-      </figure>
-      <figure>
-        <img src="waterseparator.jpg" alt="Water Separator Filter">
-        <figcaption>Water Separator</figcaption>
-      </figure>
-    </div>
-
-    <!-- Right column: engines -->
-    <div class="engines-column">
-      <figure>
-        <img src="df30athl.jpg" alt="Suzuki DF30">
-        <figcaption>Suzuki DF30hp</figcaption>
-      </figure>
-      <figure>
-        <img src="df350hp.jpg" alt="Suzuki DF350">
-        <figcaption>Suzuki DF350hp</figcaption>
-      </figure>
-    </div>
-  </div>
-
   <div class="about">
     <h2>⚙️ About Us</h2>
-    <p>JSOPhil Enterprises is a 4S facility complete with Sales, Service, Spare Parts, and Support.</p>
+    <!-- Placeholder: clickable icon linking to About page -->
+    <a href="about.html" class="about-link">
+      <img src="about-icon.png" alt="About Us Icon" style="width:60px;height:60px;">
+    </a>
   </div>
 
   <div class="contact-info">
