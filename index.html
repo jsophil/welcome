@@ -15,7 +15,7 @@
       margin: 0;
       padding: 0;
       text-align: center;
-      overflow-x: hidden; /* prevent sideways scroll */
+      overflow-x: hidden;
     }
 
     .jsophil-logo {
@@ -33,13 +33,13 @@
     h1 {
       color: darkgray;
       font-size: clamp(16px, 2vw, 26px);
-      margin-bottom: 0; /* tighter spacing */
+      margin-bottom: 0;
     }
 
     h2 {
       color: dodgerblue;
       font-size: clamp(16px, 2.5vw, 24px);
-      margin-top: 0; /* tagline nearly touching Welcome */
+      margin-top: 0;
     }
 
     p {
@@ -61,7 +61,7 @@
 
     .logo-row img {
       height: auto;
-      max-width: 52%; /* enlarged logos but still fit one row */
+      max-width: 52%;
     }
 
     .top-products {
@@ -72,41 +72,59 @@
       font-weight: bold;
     }
 
-    /* Products layout */
+    /* Products grid */
     .products-layout {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       max-width: 95%;
       margin: 20px auto;
     }
 
-    .parts-column {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start; /* left-justified */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
       gap: 15px;
+      max-width: 65%;
     }
 
-    .top-line, .bottom-line {
-      display: flex;
-      gap: 15px;
+    .products-grid figure {
+      margin: 0;
+      text-align: center;
     }
 
-    .parts-column img {
-      max-width: 80px; /* smaller parts images */
+    .products-grid img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+
+    .products-grid figcaption {
+      font-size: 12px;
+      margin-top: 5px;
+      color: #333;
+    }
+
+    /* Position bottom two centered under top three */
+    .products-grid figure:nth-child(4) {
+      grid-column: 2;
+    }
+    .products-grid figure:nth-child(5) {
+      grid-column: 3;
     }
 
     .engines-column {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center; /* center engines vertically */
+      justify-content: center;
       gap: 20px;
+      max-width: 30%;
     }
 
     .engines-column img {
-      max-width: 150px; /* larger engine images */
+      max-width: 150px;
     }
 
     figure {
@@ -114,15 +132,9 @@
       text-align: center;
     }
 
-    figcaption {
-      font-size: 12px;
-      margin-top: 5px;
-      color: #333;
-    }
-
     .about {
       margin: 15px auto;
-      max-width: 450px; /* narrower wrap for About Us */
+      max-width: 450px;
       text-align: center;
     }
 
@@ -143,7 +155,7 @@
 
     .contact-info strong,
     .contact-info a {
-      font-size: 1.1em; /* slightly bigger phone/email */
+      font-size: 1.1em;
     }
 
     .map-link {
@@ -166,108 +178,31 @@
       background-color: #005bb5;
     }
 
-    /* Mobile Portrait Optimization */
     @media (max-width: 480px) {
       .jsophil-logo {
-        width: 70vw; /* smaller logo for mobile */
+        width: 70vw;
         margin-top: 10px;
       }
 
-      h1 {
-        font-size: 18px;
-      }
+      h1 { font-size: 18px; }
+      h2 { font-size: 16px; }
+      p { font-size: 13px; }
 
-      h2 {
-        font-size: 16px;
-      }
+      .logo-row img { max-width: 50%; }
 
-      p {
-        font-size: 13px;
-      }
-
-      .logo-row {
-        flex-direction: row; /* force one row */
-        justify-content: space-between;
-        gap: 10px;
-      }
-
-      .logo-row img {
-        max-width: 50%; /* slightly smaller for mobile */
-      }
-
-      .parts-column img {
-        max-width: 60px;
+      .products-grid img {
+        width: 80px;
+        height: 80px;
       }
 
       .engines-column img {
         max-width: 120px;
       }
 
-      .contact-info {
-        padding: 12px;
-        max-width: 95%;
-      }
-
-      .map-link a {
-        font-size: 14px;
-        padding: 10px;
-      }
-
-      .about {
-        max-width: 90%;
-        padding: 8px;
-      }
+      .contact-info { padding: 12px; max-width: 95%; }
+      .map-link a { font-size: 14px; padding: 10px; }
+      .about { max-width: 90%; padding: 8px; }
     }
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal squares on top */
-  grid-template-rows: auto auto;
-  gap: 15px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.products-grid figure {
-  margin: 0;
-  text-align: center;
-}
-
-.products-grid img {
-  width: 100px; /* equal square size */
-  height: 100px;
-  object-fit: contain;
-}
-
-.products-grid figcaption {
-  font-size: 12px;
-  margin-top: 5px;
-  color: #333;
-}
-
-/* Place bottom two centered under the top three */
-.products-grid figure:nth-child(4) {
-  grid-column: 2; /* Fuel Filter centered under */
-}
-
-.products-grid figure:nth-child(5) {
-  grid-column: 3; /* Water Separator aligned next to Fuel Filter */
-}
-
-.engines-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; /* center vertically */
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.engines-column img {
-  max-width: 150px;
-}
-
-
   </style>
 </head>
 <body>
@@ -288,43 +223,51 @@
   </div>
 
   <p class="top-products">TOP PRODUCTS</p>
-  <div class="products-grid">
-    <figure>
-      <img src="ecstar-marine-oil.jpg" alt="Ecstar Marine Engine Oil">
-      <figcaption>Ecstar Marine Engine Oil</figcaption>
-    </figure>
-    <figure>
-      <img src="9900022B48ECSTARMarineGearOil.jpg" alt="Ecstar Gear Oil">
-      <figcaption>Ecstar Gear Oil</figcaption>
-    </figure>
-    <figure>
-      <img src="spark-plugs.jpg" alt="Spark Plugs">
-      <figcaption>Spark Plugs</figcaption>
-    </figure>
-    <figure>
-      <img src="1541293J10000FuelFilterLOElement.jpg" alt="Fuel Filter">
-      <figcaption>Fuel Filter</figcaption>
-    </figure>
-    <figure>
-      <img src="waterseparator.jpg" alt="Water Separator Filter">
-      <figcaption>Water Separator Filter</figcaption>
-    </figure>
-  </div>
+  <div class="products-layout">
+    <!-- Left grid: parts -->
+    <div class="products-grid">
+      <figure>
+        <img src="ecstar-marine-oil.jpg" alt="Ecstar Marine Engine Oil">
+        <figcaption>Ecstar Marine Engine Oil</figcaption>
+      </figure>
+      <figure>
+        <img src="9900022B48ECSTARMarineGearOil.jpg" alt="Ecstar Gear Oil">
+        <figcaption>Ecstar Gear Oil</figcaption>
+      </figure>
+      <figure>
+        <img src="spark-plugs.jpg" alt="Spark Plugs">
+        <figcaption>Spark Plugs</figcaption>
+      </figure>
+      <figure>
+        <img src="1541293J10000FuelFilterLOElement.jpg" alt="Fuel Filter">
+        <figcaption>Fuel Filter</figcaption>
+      </figure>
+      <figure>
+        <img src="waterseparator.jpg" alt="Water Separator Filter">
+        <figcaption>Water Separator Filter</figcaption>
+      </figure>
+    </div>
 
-  <div class="engines-column">
-    <figure>
-      <img src="df300a.jpg" alt="Suzuki DF300A">
-      <figcaption>Suzuki DF300A</figcaption>
-    </figure>
-    <figure>
-      <img src="df15.jpg" alt="Suzuki DF15">
-      <figcaption>Suzuki DF15</figcaption>
-    </figure>
+    <!-- Right column: engines -->
+    <div class="engines-column">
+      <figure>
+        <img src="df300a.jpg" alt="Suzuki DF300A">
+        <figcaption>Suzuki DF300A</figcaption>
+      </figure>
+      <figure>
+        <img src="df15.jpg" alt="Suzuki DF15">
+        <figcaption>Suzuki DF15</figcaption>
+      </figure>
+    </div>
   </div>
-</div>
 
   <div class="about">
     <h2>⚙️ About Us</h2>
+    <p>
+      JSOPhil Enterprises is a 4S facility complete with Sales, Service, Spare Parts, and Support. <br>
+      We build, repair, provide maintenance and servicing for boats and yachts with complete marine services.<br>
+      We proudly serve Philippine Customers with reliable support for your boating and marine needs.<br>
+    </p>
   </div>
 
   <div class="contact-info">
